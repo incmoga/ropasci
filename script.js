@@ -13,3 +13,10 @@ const getComputerChoice = function(){
 };
 const computerChoice = getComputerChoice();
 console.log(computerChoice);
+
+//2. function return human choice
+const getHumanChoice = function(){
+  return prompt("write: rock or paper or scissors");
+};
+const humanChoice = getHumanChoice();
+console.log(humanChoice);
