@@ -9,7 +9,7 @@ const getComputerChoice = function(){
   } else {
     result = "scissors"
   }
-  console.log("computer:", result);
+  //console.log("computer:", result);
   return result;  
   
 };
@@ -43,6 +43,8 @@ const getScore = actualScore.get;
 
 
 const playRound = function (humanChoice, computerChoice){
+  console.log(`You chose: ${humanChoice}`);
+	console.log(`Computer chose: ${computerChoice}`);
   const conditionWin1 ="We are champion! rock beats scissors";
   const conditionWin2 ="We are champion! scissors beats paper";
   const conditionWin3 ="We are champion! paper beats rock";
@@ -71,11 +73,19 @@ const playRound = function (humanChoice, computerChoice){
   } else {
     return console.log("oops it's a DRAW!")
   }
+  
 };
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+//playRound(humanSelection, computerSelection);
 console.log(getScore());
 
+const playGame = function (){
+ for (let i=0; i<5; i++){
+  playRound(humanSelection,computerSelection);
+ }
+  
+};
+playGame();
